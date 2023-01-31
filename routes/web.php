@@ -36,7 +36,7 @@ Route::middleware([
     Route::put('producto/{id}/actualizar', [ProductoController::class, 'update']);
     Route::get('producto/{id}/eliminar', [ProductoController::class, 'destroy']);
 
-    Route::get('compra', [CompraController::class, 'index']);
+    Route::get('compra', [CompraController::class, 'index'])->name('compra');
     Route::post('compra/guardar', [CompraController::class, 'store']);
     Route::get('compra/{id}/detalle', [CompraController::class, 'detalle']);
 
